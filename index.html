@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My First Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #4285f4;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            border-radius: 10px;
+        }
+        .content {
+            background-color: white;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        button {
+            background-color: #4285f4;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #3367d6;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to My First Website! 🚀</h1>
+        <p>This site is hosted on Firebase</p>
+    </header>
+
+    <div class="content">
+        <h2>About This Project</h2>
+        <p>This is a simple website created with HTML and deployed using Firebase Hosting.</p>
+        
+        <h3>Features:</h3>
+        <ul>
+            <li>Responsive design</li>
+            <li>Clean styling</li>
+            <li>Easy to customize</li>
+        </ul>
+
+        <button onclick="showMessage()">Click Me!</button>
+        <p id="message"></p>
+    </div>
+
+    <script>
+        function showMessage() {
+            const messageElement = document.getElementById('message');
+            messageElement.textContent = 'Hello! Thanks for visiting my website! 🎉';
+            messageElement.style.color = '#4285f4';
+            messageElement.style.fontWeight = 'bold';
+        }
+
+        // Display current date
+        const currentDate = new Date().toLocaleDateString();
+        document.addEventListener('DOMContentLoaded', function() {
+            const dateElement = document.createElement('p');
+            dateElement.textContent = `Today's date: ${currentDate}`;
+            dateElement.style.textAlign = 'center';
+            dateElement.style.color = '#666';
+            document.body.appendChild(dateElement);
+        });
+    </script>
+</body>
+</html>
